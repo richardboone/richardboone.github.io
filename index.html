@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="robots" content="all,follow">
+
+    <link rel="stylesheet" href="onepage-scroll.css">
+    <link rel="stylesheet" href="style.default.css" id="theme-stylesheet">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fonts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>RPL at UCSB</title>
+    
+
+    <script>
+      $(document).ready(function(){
+        var position = 0; //incrementing up means scroll down
+        var lastScrollTop = 0;
+        var dir = 0; 
+        $("#b2").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#about").offset().top
+            }, 400);
+        });
+        $("#b3").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#sponsors").offset().top
+            }, 400);
+        });
+        $("#b4").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#contact").offset().top
+            }, 400);
+        });
+
+
+        /*var scrollTimeout = null;
+        $(window).scroll(function(){
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(function(){
+                var st = $(this).scrollTop();
+                 if (st > lastScrollTop){
+                     dir = 1; 
+                     console.log("down"); 
+                 } else {
+                    dir = -1; 
+                    console.log("up"); 
+                 }
+                 lastScrollTop = st;
+                 clearTimeout($.data(this, 'scrollTimer'));
+                  $.data(this, 'scrollTimer', setTimeout(function() {
+                      console.log("activated"); 
+                      //console.log("Direction: " + dir); 
+                      if(position < 3 && dir == 1){
+                        position+=1; 
+                        //console.log("Position: " + position); 
+                        //scrollToElement(position); 
+                      }
+                      else if(position > 0 && dir == -1){
+                        position-=1; 
+                        //console.log("Position: " + position); 
+                        //scrollToElement(position); 
+                      }
+                  }, 400));
+
+            },500);
+        });*/
+
+        
+
+        /*function scrollToElement(pos){
+          console.log("inside scroll function"); 
+          var coords = 0;
+            
+                  if(pos==0){
+                  console.log("Position is 0"); //splash
+                  coords = $("#splash").position(); 
+                  console.log(coords); 
+                  window.scrollTo(coords.left, coords.top);
+                 }
+                 else if(pos==1){
+                  console.log("Position is 1"); //mission
+                  coords = $("#mission").position(); 
+                  console.log(coords); 
+                  window.scrollTo(coords.left, coords.top);
+                 }
+                 else if(pos==2){
+                  console.log("Position is 2"); //sponsors
+                  coords = $("#sponsors").position(); 
+                  console.log(coords); 
+                  window.scrollTo(coords.left, coords.top);
+                 }
+                 else if(pos==3){
+                  console.log("Position is 3"); //contact
+                  coords = $("#contacts").position(); 
+                  console.log(coords); 
+                  window.scrollTo(coords.left, coords.top);
+                 }
+            
+
+        }*/
+
+      });
+        
+      
+    </script>
+
+</head>
+
+<body id="body1" style="overflow-x:hidden;"> 
+
+
+    
+
+    <div class="wrapper">
+
+      <div class="navbar transparent navbar-inverse navbar-fixed-top">
+        <a class="navbar-brand navlink" id="b1" href='./index.html'>Home</a>
+        <a class="navbar-brand navlink" id="b2" href="#" >About Us</a>
+        <a class="navbar-brand navlink" id="b3" href="#" >Sponsors</a>
+        <a class="navbar-brand navlink" id="b4" href="#" >Contact</a>
+      </div>
+
+      <div class="backimg"> 
+        
+          <div style="height:10vh"></div>
+          <div id ="d1" style="height:40vh; width:100vw;">
+            <p id="splash" class="logo"><span>RPL at UCSB</span></p>
+          </div>
+          <div style="height:5vh"></div>
+          <div id ="d2" style="height:40vh; width:100vw;">
+            <p class="entry" id="about">Our mission is to provide ambitious aerospace opportunities for students eager to pursue similar work throughout their careers. The rigorous engineering and safety challenges associated with building flying machines will give students the skills they need to thrive in any field of engineering they choose. Currently, our primary goal is to compete in the Far Mars Rocket competition.</p>
+          </div>
+          <div style="height:10vh"></div>
+          <div id ="d3" style="height:40vh; width:100vw; background-color: rgba(0,0,0,0.6); margin-left:10vw;">
+            <p class="entry" id="sponsors">Sponsorship - <a href="#">sponsorship package</a> ready soon!</p>
+            <a href="https://engineering.ucsb.edu/"><img src="img/coelogo.png"></a>
+          </div>
+          <div style="height:5vh"></div>
+          <div id ="d4" style="height:40vh; width:100vw; background-color: rgba(0,0,0,0.6); margin-left:10vw;">
+            <p class="entry" id="contact">Contact Us! RPLatUCSB@gmail.com</p>
+          </div>
+          <div style="height:5vh"></div>
+      </div>
+
+    </div>
+
+</body>
+
+</html>
